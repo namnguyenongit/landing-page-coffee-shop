@@ -55,6 +55,11 @@
   #welcome-pic {
     width: 300px;
   }
+  /* AGENCY */
+  #agency {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -74,6 +79,11 @@
   #content-left-title,
   #content-left-welcome {
     width: 100%;
+  }
+  /* AGENCY */
+  #agency {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
