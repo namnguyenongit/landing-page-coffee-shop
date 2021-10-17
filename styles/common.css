@@ -1,0 +1,53 @@
+/* CONTENT WRAPPER */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+/* AGENCY */
+
+.agency {
+  margin-top: 6rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+  transition: all 1s ease;
+}
+
+.agency-items {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* TEMPLATE FORM */
+
+.use-template {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.use-template .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.use-template .head .title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.use-template .head .description {
+  margin-top: 1rem;
+  max-width: 60%;
+  font-weight: 300;
+}
