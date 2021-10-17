@@ -56,7 +56,7 @@
     width: 300px;
   }
   /* AGENCY */
-  #agency {
+  .agency {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
@@ -81,9 +81,20 @@
     width: 100%;
   }
   /* AGENCY */
-  #agency {
+  .agency {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+  /* SERVICES */
+  .use-template .head .description {
+    max-width: 100%;
+  }
+  .agency-items > .dishes {
+    margin-top: 3rem;
+  }
+  .agency-items > .dishes-description {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
   }
 }
 
