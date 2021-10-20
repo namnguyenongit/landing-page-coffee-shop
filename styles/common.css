@@ -30,7 +30,7 @@
 /* TEMPLATE FORM */
 
 .use-template {
-  margin-top: 6rem;
+  padding-top: 6rem;
   text-align: center;
 }
 
@@ -50,4 +50,10 @@
   margin-top: 1rem;
   max-width: 60%;
   font-weight: 300;
+}
+
+/* MENU BUTTON */
+
+.button-clicked {
+  opacity: 1 !important;
 }

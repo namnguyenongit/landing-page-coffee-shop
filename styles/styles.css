@@ -186,3 +186,71 @@ body {
   margin-top: 0.5rem;
   font-weight: 300;
 }
+
+/* MENU */
+
+.menu {
+  background-image: url('../assets/img/menu/restaurant-menu-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  padding-bottom: 6rem;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content-body-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.content-body-button > img {
+  opacity: 0.5;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.content-body-button > img:hover {
+  opacity: 1;
+}
+
+.content-body-button > p {
+  text-transform: uppercase;
+  color: #d0ae5e;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.content-body-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.content-body-data-item {
+  display: flex;
+  text-align: left;
+  opacity: 0.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 0.5rem;
+}
+
+.data-item-head {
+  margin-bottom: 1rem;
+}
+
+.data-item-des {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
