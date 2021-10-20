@@ -96,6 +96,17 @@
     margin-top: 1.5rem;
     margin-bottom: 3rem;
   }
+  /* MENU */
+  .content-body-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .content-body-button {
+    transform: scale(0.8);
+  }
+  .content-body-data {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 390px) {
