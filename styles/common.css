@@ -44,12 +44,14 @@
 .use-template .head .title {
   text-transform: uppercase;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
 }
 
 .use-template .head .description {
   margin-top: 1rem;
   max-width: 60%;
+  opacity: 0.6;
   font-weight: 300;
 }
 

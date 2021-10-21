@@ -310,3 +310,10 @@ body {
   font-size: 0.6rem;
   letter-spacing: 0.1rem;
 }
+
+/* RECOMMENDED */
+
+.recommended {
+  background-color: #242526;
+  color: #fff;
+}
