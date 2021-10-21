@@ -2,7 +2,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   max-width: 1190px;
   margin: 0 auto;
 }
@@ -32,6 +32,7 @@
 .use-template {
   padding-top: 6rem;
   text-align: center;
+  padding-bottom: 6rem;
 }
 
 .use-template .head {

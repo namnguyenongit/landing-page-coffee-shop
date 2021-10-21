@@ -195,7 +195,6 @@ body {
   background-position: center center;
   background-size: cover;
   color: white;
-  padding-bottom: 6rem;
 }
 
 .content-body {
@@ -253,4 +252,61 @@ body {
 .data-item-des {
   font-size: 0.9rem;
   font-weight: 300;
+}
+
+/* CAFE REVIEW */
+
+.review {
+  background-color: #fbf9f3;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-item {
+  background-color: #fff;
+  border: 1px solid rgb(255, 230, 230);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-item > i {
+  font-size: 3rem;
+  color: #d0ae5e;
+}
+
+.review-text {
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+.review-vote {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.review-vote > i {
+  color: #d0ae5e;
+  font-size: 1.2rem;
+  margin: 0 0.2rem;
+}
+
+.review-name {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.review-company {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
 }

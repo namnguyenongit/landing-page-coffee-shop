@@ -107,6 +107,10 @@
   .content-body-data {
     grid-template-columns: 1fr;
   }
+  /* REVIEW */
+  .review-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 390px) {
