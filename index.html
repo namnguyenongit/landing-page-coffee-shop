@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/hero-text.png">
   <link rel="stylesheet" href="./styles/common.css">
   <link rel="stylesheet" href="./styles/styles.css">
@@ -173,11 +174,74 @@
         assumenda officia dolores ad nulla praesentium voluptatem, possimus vero provident a mollitia quos nihil cum
         tempore, quam animi?</div>
       </div>
+      <div class="my-slider carousel">
+        <div>
+          <div class="slider-item">
+            <div class="slider-left">
+              <div class="slider-left-title">coffee traveler</div>
+              <div class="slider-left-des">Recommended by our chef Nicole Jones</div>
+              <div class="slider-left-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, eveniet culpa. Sit dolorum tenetur quia et natus sed
+              debitis nesciunt nostrum mollitia accusamus quisquam, esse, aut, perspiciatis sapiente quo quas.</div>
+              <div class="slider-left-signature">nicole jones</div>
+            </div>
+            <div class="slider-right" style="background-image: url('../assets/img/recommended/hero-bg40.jpg')"></div>
+          </div>
+        </div>
+        <div>
+          <div class="slider-item">
+            <div class="slider-left">
+              <div class="slider-left-title">kung pao pastrami</div>
+              <div class="slider-left-des">Recommended by our chef Bryan Johnson</div>
+              <div class="slider-left-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, eveniet culpa.
+                Sit dolorum tenetur quia et natus sed
+                debitis nesciunt nostrum mollitia accusamus quisquam, esse, aut, perspiciatis sapiente quo quas.</div>
+              <div class="slider-left-signature">bryan johnson</div>
+            </div>
+            <div class="slider-right" style="background-image: url('../assets/img/recommended/restaurant-chef-02.jpg')"></div>
+          </div>
+        </div>
+        <div>
+          <div class="slider-item">
+            <div class="slider-left">
+              <div class="slider-left-title">shrimp curry</div>
+              <div class="slider-left-des">Recommended by our chef Jeremy dupont</div>
+              <div class="slider-left-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, eveniet culpa. Sit dolorum tenetur quia et natus sed
+              debitis nesciunt nostrum mollitia accusamus quisquam, esse, aut, perspiciatis sapiente quo quas.</div>
+              <div class="slider-left-signature">jeremy dupont</div>
+            </div>
+            <div class="slider-right" style="background-image: url('../assets/img/recommended/restaurant-chef-03.jpg')"></div>
+          </div>
+        </div>
+      </div>
+      <div class="controls-container">
+        <button class="prev-btn"><i class="ti-control-backward"></i></button>
+        <button class="next-btn"><i class="ti-control-forward"></i></button>
+      </div>
     </div>
   </div>
   <div class="blogs"></div>
   <div class="contact"></div>
   <div class="booking"></div>
-  <script src="./index.js"></script>
+  <script type='module' src="./index.js"></script>
+  <script type="module">
+    import { tns } from './node_modules/tiny-slider/src/tiny-slider.js'
+    // Docs: https://github.com/ganlanyuan/tiny-slider
+    var slider = tns({
+      container: '.my-slider',
+      slideBy: 'page',
+      center: true,
+      autoplayHoverPause: true,
+      autoplayButtonOutput: false,
+      controlsContainer: '.controls-container',
+      prevButton: '.prev-btn',
+      nextButton: '.next-btn',
+      speed: 800,
+      mouseDrag: true,
+      controlsPosition: 'bottom',
+      nav: false,
+      preventActionWhenRunning: true,
+      arrowKeys: true
+    })
+  </script>
 </body>
 </html>
