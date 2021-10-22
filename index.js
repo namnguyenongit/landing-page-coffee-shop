@@ -3,6 +3,8 @@ const $$ = document.querySelectorAll.bind(document)
 
 const menuButtons = $('.content-body-buttons')
 const menuDishes = $('.content-body-data')
+const reviewList = $('.review-list')
+const carousel = $('.carousel')
 
 const menuData = [
   {
@@ -217,6 +219,66 @@ const menuData = [
   },
 ]
 
+const reviewData = [
+  {
+    name: 'nathan ford',
+    company: 'google inc',
+    review:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id neque impedit ex inventore? Ipsa quo facilis, accusantium neque amet labore saepe dolorum, officia animi molestias nemo obcaecati tempore eius quasi?',
+  },
+  {
+    name: 'nathan ford',
+    company: 'google inc',
+    review:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id neque impedit ex inventore? Ipsa quo facilis, accusantium neque amet labore saepe dolorum, officia animi molestias nemo obcaecati tempore eius quasi?',
+  },
+  {
+    name: 'nathan ford',
+    company: 'google inc',
+    review:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id neque impedit ex inventore? Ipsa quo facilis, accusantium neque amet labore saepe dolorum, officia animi molestias nemo obcaecati tempore eius quasi?',
+  },
+]
+
+window.onload = () => {
+  // Default menu data
+  const menuHtml = menuData
+    .filter((data) => data.type === 'bread')
+    .map((data) => {
+      return `
+          <div class="content-body-data-item">
+            <div class="data-item-content">
+              <div class="data-item-head">${data.name}</div>
+              <div class="data-item-des">${data.description}</div>
+            </div>
+            <div class="data-item-price">$${data.price}</div>
+          </div>
+        `
+    })
+    .join('')
+  const reviewHtml = reviewData
+    .map((data) => {
+      return `
+      <div class="review-item">
+        <i class="ti-quote-left"></i>
+        <div class="review-text">${data.review}</div>
+        <div class="review-vote">
+          <i class="ti-star"></i>
+          <i class="ti-star"></i>
+          <i class="ti-star"></i>
+          <i class="ti-star"></i>
+          <i class="ti-star"></i>
+        </div>
+        <div class="review-name">${data.name}</div>
+        <div class="review-company">${data.company}</div>
+      </div>
+    `
+    })
+    .join('')
+  menuDishes.innerHTML = menuHtml
+  reviewList.innerHTML = reviewHtml
+}
+
 window.onscroll = () => {
   if (window.innerWidth > 960) {
     if (
@@ -270,25 +332,6 @@ const handlePopupClicked = () => {
     const linkList = document.querySelector('#links-items')
     linkList.style.display = 'none'
   }
-}
-
-window.onload = () => {
-  // Default menu data
-  const html = menuData
-    .filter((data) => data.type === 'bread')
-    .map((data) => {
-      return `
-          <div class="content-body-data-item">
-            <div class="data-item-content">
-              <div class="data-item-head">${data.name}</div>
-              <div class="data-item-des">${data.description}</div>
-            </div>
-            <div class="data-item-price">$${data.price}</div>
-          </div>
-        `
-    })
-    .join('')
-  menuDishes.innerHTML = html
 }
 
 // Click on menu buttons
