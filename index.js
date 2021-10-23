@@ -5,6 +5,7 @@ const menuButtons = $('.content-body-buttons')
 const menuDishes = $('.content-body-data')
 const reviewList = $('.review-list')
 const carousel = $('.carousel')
+const blogList = $('.blog-list')
 
 const menuData = [
   {
@@ -240,6 +241,30 @@ const reviewData = [
   },
 ]
 
+const blogData = [
+  {
+    image: './assets/img/blogs/agency-content-img01.jpg',
+    address: 'martin smith 29 july, 2016',
+    dish: 'warm hummus with spiced lamb',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, fugiat blanditiis nihil hic aut adipisci nemo inventore saepe explicabo odio, debitis dignissimos.',
+  },
+  {
+    image: './assets/img/blogs/agency-content-img02.jpg',
+    address: 'paul scrivens 26 july, 2016',
+    dish: 'scratch made moscow mules',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, fugiat blanditiis nihil hic aut adipisci nemo inventore saepe explicabo odio, debitis dignissimos.',
+  },
+  {
+    image: './assets/img/blogs/agency-content-img03.jpg',
+    address: 'martin smith 24 july, 2016',
+    dish: 'crumb topped apple slab pie',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, fugiat blanditiis nihil hic aut adipisci nemo inventore saepe explicabo odio, debitis dignissimos.',
+  },
+]
+
 window.onload = () => {
   // Default menu data
   const menuHtml = menuData
@@ -275,6 +300,23 @@ window.onload = () => {
     `
     })
     .join('')
+  const blogListHtml = blogData
+    .map((data) => {
+      return `
+      <div class="blog-item">
+        <div class="blog-item-head">
+          <img src=${data.image}>
+        </div>
+        <div class="blog-item-content">
+          <button class="blog-content-address">${data.address}</button>
+          <div class="blog-content-dish">${data.dish}</div>
+          <div class="blog-content-des">${data.description}</div>
+        </div>
+      </div>
+    `
+    })
+    .join('')
+  blogList.innerHTML = blogListHtml
   menuDishes.innerHTML = menuHtml
   reviewList.innerHTML = reviewHtml
 }
