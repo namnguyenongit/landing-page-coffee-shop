@@ -6,6 +6,7 @@ const menuDishes = $('.content-body-data')
 const reviewList = $('.review-list')
 const carousel = $('.carousel')
 const blogList = $('.blog-list')
+const contactList = $('.contact-items')
 
 const menuData = [
   {
@@ -265,6 +266,29 @@ const blogData = [
   },
 ]
 
+const contactData = [
+  {
+    icon: 'ti-location-pin',
+    title: 'contact address',
+    description: '301 The Greenhouse, Custard,<br/>Factory, London, E2 8DY.',
+  },
+  {
+    icon: 'ti-mobile',
+    title: 'call us today!',
+    description: '(M) +44 (0) 123 456 7890<br/>(O) +44 (0) 123 456 7890',
+  },
+  {
+    icon: 'ti-email',
+    title: 'email',
+    description: 'no-reply@domain.com<br/>help@domain.com',
+  },
+  {
+    icon: 'ti-time',
+    title: 'working hours',
+    description: 'Mon to Sat - 9 AM to 11 PM<br/>Sunday - 10 AM to 6 PM',
+  },
+]
+
 window.onload = () => {
   // Default menu data
   const menuHtml = menuData
@@ -316,9 +340,21 @@ window.onload = () => {
     `
     })
     .join('')
+  const contactHtml = contactData
+    .map((data) => {
+      return `
+      <div class="contact-item">
+        <i class=${data.icon}></i>
+        <div class="contact-item-title">${data.title}</div>
+        <div class="contact-item-des">${data.description}</div>
+      </div>
+    `
+    })
+    .join('')
   blogList.innerHTML = blogListHtml
   menuDishes.innerHTML = menuHtml
   reviewList.innerHTML = reviewHtml
+  contactList.innerHTML = contactHtml
 }
 
 window.onscroll = () => {
