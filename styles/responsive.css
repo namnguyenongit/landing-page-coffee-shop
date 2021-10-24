@@ -128,6 +128,15 @@
   .contact-items {
     grid-template-columns: repeat(1, 1fr);
   }
+  /* BOOKING */
+  .submit-form {
+    width: 100%;
+  }
+  .submit-form button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 390px) {
