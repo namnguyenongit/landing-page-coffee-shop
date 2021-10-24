@@ -1,6 +1,8 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+const navigationBtn = $('.nav-icons')
+const linkItemsBtn = $$('.links-items-btn')
 const menuButtons = $('.content-body-buttons')
 const menuDishes = $('.content-body-data')
 const reviewList = $('.review-list')
@@ -400,17 +402,19 @@ window.onresize = () => {
   }
 }
 // Popup in navigation bar
-const handlePopup = () => {
+navigationBtn.onclick = () => {
   const linkList = document.querySelector('#links-items')
   if (linkList.style.display == 'flex') linkList.style.display = 'none'
   else linkList.style.display = 'flex'
 }
-const handlePopupClicked = () => {
-  if (window.innerWidth <= 960) {
-    const linkList = document.querySelector('#links-items')
-    linkList.style.display = 'none'
+linkItemsBtn.forEach((item) => {
+  item.onclick = () => {
+    if (window.innerWidth <= 960) {
+      const linkList = document.querySelector('#links-items')
+      linkList.style.display = 'none'
+    }
   }
-}
+})
 
 // Click on menu buttons
 menuButtons.onclick = (e) => {
