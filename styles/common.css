@@ -76,3 +76,9 @@ body {
 .button-clicked {
   opacity: 1 !important;
 }
+
+/* HIDE */
+
+.hide {
+  display: none !important;
+}

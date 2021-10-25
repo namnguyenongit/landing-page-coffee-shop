@@ -9,6 +9,8 @@ const reviewList = $('.review-list')
 const carousel = $('.carousel')
 const blogList = $('.blog-list')
 const contactList = $('.contact-items')
+const previewImages = $$('.agency-items > img')
+const previewWindow = $('.preview-window')
 
 const menuData = [
   {
@@ -359,6 +361,21 @@ window.onload = () => {
   contactList.innerHTML = contactHtml
 }
 
+previewImages.forEach((image) => {
+  image.onclick = (e) => {
+    previewWindow.innerHTML = `
+      <div class="close-window-btn">
+        <i class="ti-close"></i>
+      </div>
+      <img src=${e.target.getAttribute('src')}>
+    `
+    previewWindow.classList.remove('hide')
+    $('.close-window-btn').onclick = () => {
+      previewWindow.classList.add('hide')
+    }
+  }
+})
+
 window.onscroll = () => {
   if (window.innerWidth > 960) {
     if (
@@ -398,7 +415,7 @@ window.onresize = () => {
     isDone = true
   } else if (isDone && window.innerWidth <= 960) {
     isDone = false
-    handlePopup()
+    // handlePopup()
   }
 }
 // Popup in navigation bar
