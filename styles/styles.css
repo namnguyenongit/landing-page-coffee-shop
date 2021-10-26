@@ -42,9 +42,14 @@
   margin-right: 1rem;
 }
 
-#links-items li:hover {
+#links-items li:hover > a {
   cursor: pointer;
   color: #bfbcbd;
+}
+
+.links-items-btn a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #reservation {
@@ -96,7 +101,7 @@
   margin: 0 auto;
   justify-content: space-between;
   max-width: 1190px;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 #content-left {
@@ -168,13 +173,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .close-window-btn {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
 }
 
 .close-window-btn:hover {
