@@ -12,6 +12,7 @@ body {
   display: inline-block;
   overflow-x: hidden;
   font-family: montserrat, monospace;
+  scroll-behavior: smooth;
 }
 
 /* CONTENT WRAPPER */
@@ -75,4 +76,10 @@ body {
 
 .button-clicked {
   opacity: 1 !important;
+}
+
+/* HIDE */
+
+.hide {
+  display: none !important;
 }
