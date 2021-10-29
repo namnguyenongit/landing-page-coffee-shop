@@ -366,15 +366,17 @@ window.onload = () => {
 
 previewImages.forEach((image) => {
   image.onclick = (e) => {
-    previewWindow.innerHTML = `
-      <div class="close-window-btn">
-        <i class="ti-close"></i>
-      </div>
-      <img src=${e.target.getAttribute('src')}>
-    `
-    previewWindow.classList.remove('hide')
-    $('.close-window-btn').onclick = () => {
-      previewWindow.classList.add('hide')
+    if (window.innerWidth > 768) {
+      previewWindow.innerHTML = `
+          <div class="close-window-btn">
+            <i class="ti-close"></i>
+          </div>
+          <img src=${e.target.getAttribute('src')}>
+        `
+      previewWindow.classList.remove('hide')
+      $('.close-window-btn').onclick = () => {
+        previewWindow.classList.add('hide')
+      }
     }
   }
 })
