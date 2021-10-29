@@ -294,6 +294,9 @@ const contactData = [
 ]
 
 window.onload = () => {
+  if (window.innerWidth <= 960) {
+    $('#links-items').style.display = 'none'
+  }
   // Default menu data
   const menuHtml = menuData
     .filter((data) => data.type === 'bread')
@@ -415,7 +418,7 @@ window.onresize = () => {
     isDone = true
   } else if (isDone && window.innerWidth <= 960) {
     isDone = false
-    // handlePopup()
+    linkList.style.display = 'none'
   }
 }
 // Popup in navigation bar
