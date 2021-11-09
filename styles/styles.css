@@ -388,10 +388,9 @@
   margin-top: 1rem;
 }
 
-.slider-right {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.slider-right > img {
+  width: 100%;
+  height: 100%;
 }
 
 .prev-btn,
