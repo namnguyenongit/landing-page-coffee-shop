@@ -13,6 +13,7 @@ const blogList = $('.blog-list')
 const contactList = $('.contact-items')
 const previewImages = $$('.agency-items > img')
 const previewWindow = $('.preview-window')
+const submitForm = $('.submit-form')
 const submitBtn = $('#submit')
 
 window.onload = () => {
@@ -187,7 +188,18 @@ menuButtons.onclick = (e) => {
   }
 }
 
-submitBtn.onclick = (e) => {
+const processForm = (e) => {
   e.preventDefault()
-  alert('Thank you for checking out this page!')
+  const name = document.querySelector('#name').value
+  const message = document.querySelector('#message').value
+  window.open(
+    `mailto:namnv.forwork@gmail.com?subject=SPA review&body=Hello, i'm ${name}, I've checked out your coffee shop SPA and these are my opinions: ${message}`
+  )
+  return false
+}
+
+if (submitForm.attachEvent) {
+  submitForm.attachEvent('submit', processForm)
+} else {
+  submitForm.addEventListener('submit', processForm)
 }
